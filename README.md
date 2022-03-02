@@ -7,7 +7,7 @@
 3. Create React App
 4. Create Git Repository
 5. List Products
-6. create product array
-7. add products images
-8. render products
-9. style products
+   a. create product array
+   b. add products images
+   c. render products
+   d. style products

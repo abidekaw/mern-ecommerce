@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import Container from 'react-bootstrap/Container';
@@ -10,13 +10,13 @@ function App() {
     <BrowserRouter>
       <div className="d-flex flex-column site-container">
         <header>
-          <Container>
-            <Navbar bg="dark" variant="dark">
+          <Navbar bg="dark" variant="dark">
+            <Container>
               <LinkContainer to="/">
                 <Navbar.Brand>eCommerce</Navbar.Brand>
               </LinkContainer>
-            </Navbar>
-          </Container>
+            </Container>
+          </Navbar>
         </header>
         <main>
           <Container>

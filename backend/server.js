@@ -27,7 +27,7 @@ app.use('/api/products', productRouter);
 app.use('/api/users', userRouter);
 
 app.use((err, req, res, next) => {
-  res.send(500).send({ message: err.message });
+  res.status(500).send({ message: err.message });
 });
 
 const port = process.env.PORT || 5000;

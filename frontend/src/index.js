@@ -8,14 +8,14 @@ import { HelmetProvider } from 'react-helmet-async';
 import { StoreProvider } from './Store';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <StoreProvider>
-      <HelmetProvider>
-        <App />
-      </HelmetProvider>
-    </StoreProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <StoreProvider>
+            <HelmetProvider>
+                <App />
+            </HelmetProvider>
+        </StoreProvider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

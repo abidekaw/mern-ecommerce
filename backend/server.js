@@ -10,13 +10,13 @@ import orderRouter from './routes/orderRoutes.js';
 dotenv.config();
 
 mongoose
-  .connect(process.env.MONGODB_URI)
-  .then(() => {
-    console.log('connected to db');
-  })
-  .catch((err) => {
-    console.log(err.message);
-  });
+    .connect(process.env.MONGODB_URI)
+    .then(() => {
+        console.log('connected to db');
+    })
+    .catch((err) => {
+        console.log(err.message);
+    });
 
 const app = express();
 
@@ -29,10 +29,10 @@ app.use('/api/users', userRouter);
 app.use('/api/orders', orderRouter);
 
 app.use((err, req, res, next) => {
-  res.status(500).send({ message: err.message });
+    res.status(500).send({ message: err.message });
 });
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
-  console.log(`Serve at http://localhost:${port}`);
+    console.log(`Serve at http://localhost:${port}`);
 });

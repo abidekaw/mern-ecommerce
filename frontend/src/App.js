@@ -49,34 +49,20 @@ function App() {
                                         Cart
                                         {cart.cartItems.length > 0 && (
                                             <Badge pill bg="danger">
-                                                {cart.cartItems.reduce(
-                                                    (a, c) => a + c.quantity,
-                                                    0
-                                                )}
+                                                {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
                                             </Badge>
                                         )}
                                     </Link>
                                     {userInfo ? (
-                                        <NavDropdown
-                                            title={userInfo.name}
-                                            id="basic-nav-dropdown"
-                                        >
+                                        <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
                                             <LinkContainer to="/profile">
-                                                <NavDropdown.Item>
-                                                    User Profile
-                                                </NavDropdown.Item>
+                                                <NavDropdown.Item>User Profile</NavDropdown.Item>
                                             </LinkContainer>
                                             <LinkContainer to="/orderhistory">
-                                                <NavDropdown.Item>
-                                                    Order History
-                                                </NavDropdown.Item>
+                                                <NavDropdown.Item>Order History</NavDropdown.Item>
                                             </LinkContainer>
                                             <NavDropdown.Divider />
-                                            <Link
-                                                className="dropdown-item"
-                                                to="#signout"
-                                                onClick={signoutHandler}
-                                            >
+                                            <Link className="dropdown-item" to="#signout" onClick={signoutHandler}>
                                                 Sign Out
                                             </Link>
                                         </NavDropdown>
@@ -93,37 +79,16 @@ function App() {
                 <main>
                     <Container className="mt-3">
                         <Routes>
-                            <Route
-                                path="/product/:slug"
-                                element={<ProductScreen />}
-                            />
+                            <Route path="/product/:slug" element={<ProductScreen />} />
                             <Route path="/cart" element={<CartScreen />} />
                             <Route path="/signin" element={<SigninScreen />} />
                             <Route path="/signup" element={<SignupScreen />} />
-                            <Route
-                                path="/profile"
-                                element={<ProfileScreen />}
-                            />
-                            <Route
-                                path="/order/:id"
-                                element={<OrderScreen />}
-                            ></Route>
-                            <Route
-                                path="/orderhistory"
-                                element={<OrderHistoryScreen />}
-                            ></Route>
-                            <Route
-                                path="/shipping"
-                                element={<ShippingAddressScreen />}
-                            />
-                            <Route
-                                path="/payment"
-                                element={<PaymentMethodScreen />}
-                            />
-                            <Route
-                                path="/placeorder"
-                                element={<PlaceOrderScreen />}
-                            />
+                            <Route path="/profile" element={<ProfileScreen />} />
+                            <Route path="/order/:id" element={<OrderScreen />}></Route>
+                            <Route path="/orderhistory" element={<OrderHistoryScreen />}></Route>
+                            <Route path="/shipping" element={<ShippingAddressScreen />} />
+                            <Route path="/payment" element={<PaymentMethodScreen />} />
+                            <Route path="/placeorder" element={<PlaceOrderScreen />} />
                             <Route path="/" element={<HomeScreen />} />
                         </Routes>
                     </Container>
